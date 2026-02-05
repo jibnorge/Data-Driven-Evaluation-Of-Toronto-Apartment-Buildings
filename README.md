@@ -40,6 +40,42 @@ Toronto faces a housing crisis with rising costs, strained shelter systems, and 
 
 ---
 
+## Workflow
+```mermaid
+graph TD
+    A[Start: Daily Scheduled Task] --> B[Data Acquisition<br>Download latest datasets from Open Toronto]
+
+    B --> C[Data Preparation<br>Standardize scores to 0–5<br>Merge datasets<br>Handle missing values]
+
+    C --> D[Data Splitting<br>70% Train / 30% Test]
+
+    D --> E[Train & Tune Models<br>CatBoost + others<br>Hyperparameter search<br>5-fold CV]
+
+    E --> F{Model Performance<br>Satisfactory?}
+
+    F -->|Yes| G[Generate Predictions<br>Save results CSV]
+
+    G --> H[Update Tableau Dashboard<br>with new predictions & visuals]
+
+    H --> I[End: Deliver Insights<br>to Stakeholders]
+
+    F -->|No| J[Review & Adjust<br>Features / Parameters]
+
+    J --> E
+
+    %% Dark theme styling for black background
+    classDef startEnd fill:#1a3c34,stroke:#4ade80,stroke-width:2px,color:#e0f7fa
+    classDef process fill:#0d1b2a,stroke:#778da9,stroke-width:2px,color:#e0e7ff
+    classDef decision fill:#370617,stroke:#9d4edd,stroke-width:2px,color:#f3e8ff
+    classDef loop fill:#332200,stroke:#ffaa00,stroke-width:2px,color:#fff3e0
+
+    class A,I startEnd
+    class B,C,D,E,G,H process
+    class F decision
+    class J loop
+```
+---
+
 ## Key Findings
 - **Building Conditions**: Notable disparities across neighbourhoods; common issues include structural damage and plumbing failures.
 - **Resident Satisfaction**: Influenced by building age, location, and maintenance frequency.
