@@ -1,3 +1,6 @@
+![Project Image](images/Apartment.png?raw=true)
+
+
 # Data-Driven-Evaluation-Of-Toronto-Apartment-Buildings
 
 The project evaluates the conditions of Toronto apartment buildings using the **Apartment Building Evaluation Dataset** sourced from the [Open Toronto website](https://open.toronto.ca/dataset/apartment-building-evaluation/).. Through detailed analysis and interactive Tableau visualizations, the project aims to identify maintenance issues, trends, and regional disparities impacting resident satisfaction and safety. The findings are intended to support data-driven decision-making by policymakers, property managers, investors, and other stakeholders, contributing to the improvement of housing standards across the city.
