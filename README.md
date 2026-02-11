@@ -1,4 +1,4 @@
-# Data-Driven-Evaluation-Of-Toronto-Apartment-Buildings
+# Data Driven Evaluation Of Toronto Apartment Buildings
 
 ![Project Image](images/Header.png?raw=true)
 
